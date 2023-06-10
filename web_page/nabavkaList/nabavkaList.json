@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "newForm3",
-  "name" : "newForm3",
-  "lastUpdate" : 1686419416263,
+  "id" : "nabavkaList",
+  "name" : "nabavkaList",
+  "lastUpdate" : 1686419220632,
   "rows" : [
     [
       {
@@ -30,7 +30,7 @@
             "value" : 12
           }
         },
-        "reference" : "66f22629-48cb-4824-aa76-a5cfbea39629",
+        "reference" : "d6437859-2cdf-4130-bc12-34623be60c9c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "description" : "Auto generate ui for business object \"rs.ac.uns.model.ZahtevZaNabavku\"",
@@ -41,8 +41,20 @@
               "dimension" : {
                 "xs" : 12
               },
-              "propertyValues" : { },
-              "reference" : "da83d6e1-e54f-4243-b5d0-e3fcb09e50ff",
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "7cffefb3-5812-449d-968c-10e45a6082e3",
               "hasValidationError" : false,
               "id" : "pbContainer",
               "description" : "\"rs.ac.uns.model.ZahtevZaNabavku\" object from \"zahtevZaNabavku\" variable",
@@ -82,7 +94,7 @@
                         "value" : 12
                       }
                     },
-                    "reference" : "a3eb40c9-d5e2-43e2-9a42-6a45e54480a1",
+                    "reference" : "b81e0fa0-1e06-4d17-bae7-75b584dc859b",
                     "hasValidationError" : false,
                     "id" : "pbTitle",
                     "description" : ""
@@ -153,7 +165,7 @@
                         "value" : true
                       }
                     },
-                    "reference" : "65a6e76a-cbb3-4016-9ed6-d8a2114fc63f",
+                    "reference" : "0375c2ba-d067-478b-83b5-7a287f4aaf17",
                     "hasValidationError" : false,
                     "id" : "pbTable",
                     "description" : ""
@@ -185,7 +197,7 @@
                         "value" : 1
                       }
                     },
-                    "reference" : "2845b4ea-05af-4bcd-b52d-0af7a264a610",
+                    "reference" : "271bdf74-1506-4f5e-b884-a69ae74e825d",
                     "hasValidationError" : false,
                     "id" : "pbContainer",
                     "rows" : [
@@ -217,7 +229,7 @@
                         "value" : 11
                       }
                     },
-                    "reference" : "83174741-e6c8-43a0-a814-7c0109e13be7",
+                    "reference" : "816d41b8-5786-4a2d-b0e4-419135e8e787",
                     "hasValidationError" : false,
                     "id" : "pbContainer",
                     "description" : "Display \"ZahtevZaNabavku\" details when a line is selected in the table above",
@@ -280,7 +292,7 @@
                               "value" : true
                             }
                           },
-                          "reference" : "d74f7a29-b2b9-4812-b7d3-fa9d42cd11e2",
+                          "reference" : "02444908-372a-46ca-8fb6-cf6010a620d7",
                           "hasValidationError" : false,
                           "id" : "pbInput",
                           "description" : ""
@@ -344,7 +356,7 @@
                               "value" : true
                             }
                           },
-                          "reference" : "896569fd-2311-440f-8063-369d0232bda2",
+                          "reference" : "4ddfdd4c-af57-4154-9ee7-b6cd746343d6",
                           "hasValidationError" : false,
                           "id" : "pbInput",
                           "description" : ""
@@ -408,7 +420,7 @@
                               "value" : true
                             }
                           },
-                          "reference" : "befe95f2-c419-4b71-b3df-b09c6cb3a31a",
+                          "reference" : "85910847-137f-45de-af19-9d3ced520889",
                           "hasValidationError" : false,
                           "id" : "pbInput",
                           "description" : ""
@@ -453,7 +465,7 @@
                               "value" : "zahtevZaNabavku_selected.prihvacenZahtev"
                             }
                           },
-                          "reference" : "d34f70ab-8205-4dd8-95ad-5cf633494a35",
+                          "reference" : "b2879e6d-69cc-4a7c-ba5e-990dbd84ab14",
                           "hasValidationError" : false,
                           "id" : "pbCheckbox",
                           "description" : ""
@@ -471,67 +483,22 @@
   ],
   "assets" : [
     {
-      "id" : "f0a44f23-579c-4e9e-9f2b-9c0ab9b83d36",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "91fb6460-8b42-4622-8bf8-57fa92832a80",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "a83c5998-d339-4cdc-807a-d1a970fd31ac",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "481d16da-60e5-493a-9dc7-ed2aed168273",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{ }"
-      ],
-      "exposed" : false
-    },
-    "submit_errors_list" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.formOutput && $data.formOutput._submitError && $data.formOutput._submitError.explanations){",
-        "\tconst liElements = $data.formOutput._submitError.explanations",
-        "\t\t.filter(cause => cause !== null)",
-        "\t\t.map(cause => \"<li>\" + cause + \"</li>\")",
-        "\t\t.join('');",
-        "\tif(liElements){",
-        "\t\treturn \"<ul>\" + liElements + \"</ul>\";",
-        "\t}",
-        "}"
-      ],
-      "exposed" : false
-    },
-    "formOutput" : {
-      "type" : "expression",
-      "value" : [
-        "return {",
-        "",
-        "}"
-      ],
-      "exposed" : false
-    },
-    "ugovor" : {
-      "type" : "businessdata",
-      "value" : [
-        "{\"displayValue\":\"find [rs.ac.uns.model.Ugovor]\",\"businessObjectName\":\"Ugovor\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"rs.ac.uns.model.Ugovor\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
-      ],
-      "exposed" : false
-    },
-    "ugovor_selected" : {
-      "type" : "constant",
-      "value" : [
-        ""
-      ],
-      "exposed" : false
-    },
     "zahtevZaNabavku" : {
       "type" : "businessdata",
       "value" : [
@@ -548,7 +515,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "81869bb8-f2a3-4a79-a1e6-8d22b40f6c8c",
-  "type" : "form",
+  "uuid" : "cea38865-8457-48f7-9c67-cf028cede950",
+  "type" : "page",
   "description" : "Page generated with Bonita UI designer"
 }
