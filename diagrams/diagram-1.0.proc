@@ -593,12 +593,12 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_kKsMwQYLEe67XYCB2OfAJg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_kKsMwwYLEe67XYCB2OfAJg" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <filters xmi:type="process:ActorFilter" xmi:id="_244kgAX7Ee67XYCB2OfAJg" name="Manager of supply employee" definitionId="bonita-actorfilter-user-manager" definitionVersion="1.0.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_244kgQX7Ee67XYCB2OfAJg" definitionId="bonita-actorfilter-user-manager" version="1.0.0">
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_244kggX7Ee67XYCB2OfAJg" key="userId">
-              <expression xmi:type="expression:Expression" xmi:id="_244kgwX7Ee67XYCB2OfAJg" name="userId()" content="import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstance&#xD;&#xA;import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstanceSearchDescriptor&#xD;&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xD;&#xA;import org.bonitasoft.engine.search.SearchResult&#xD;&#xA;&#xD;&#xA; def taskName = 'Pregled zahteva za nabavku'&#xD;&#xA;&#xD;&#xA; final SearchOptionsBuilder searchOptionsBuilder = new SearchOptionsBuilder(0, 1)&#xD;&#xA; .filter(ArchivedHumanTaskInstanceSearchDescriptor.PARENT_PROCESS_INSTANCE_ID, processInstanceId)&#xD;&#xA; .filter(ArchivedHumanTaskInstanceSearchDescriptor.NAME, taskName).filter(ArchivedHumanTaskInstanceSearchDescriptor.TERMINAL, true)&#xD;&#xA;&#xD;&#xA; SearchResult&lt;ArchivedHumanTaskInstance> searchResult = apiAccessor.processAPI.searchArchivedHumanTasks(searchOptionsBuilder.done())&#xD;&#xA;&#xD;&#xA; final List&lt;ArchivedHumanTaskInstance> tasks = searchResult.result&#xD;&#xA;&#xD;&#xA; tasks.first().executedBy" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                <referencedElements xmi:type="expression:Expression" xmi:id="_244khAX7Ee67XYCB2OfAJg" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-                <referencedElements xmi:type="expression:Expression" xmi:id="_244khQX7Ee67XYCB2OfAJg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        <filters xmi:type="process:ActorFilter" xmi:id="_UrnJgAfVEe6tIfKwaAjPqg" name="Manager of supply employee - filter" definitionId="bonita-actorfilter-user-manager" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_UrnJgQfVEe6tIfKwaAjPqg" definitionId="bonita-actorfilter-user-manager" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UrnJggfVEe6tIfKwaAjPqg" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_UrnJgwfVEe6tIfKwaAjPqg" name="userId()" content="import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstance&#xD;&#xA;import org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstanceSearchDescriptor&#xD;&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xD;&#xA;import org.bonitasoft.engine.search.SearchResult&#xD;&#xA;&#xD;&#xA; def taskName = 'Pregled zahteva za nabavku'&#xD;&#xA;&#xD;&#xA; final SearchOptionsBuilder searchOptionsBuilder = new SearchOptionsBuilder(0, 1)&#xD;&#xA; .filter(ArchivedHumanTaskInstanceSearchDescriptor.PARENT_PROCESS_INSTANCE_ID, processInstanceId)&#xD;&#xA; .filter(ArchivedHumanTaskInstanceSearchDescriptor.NAME, taskName).filter(ArchivedHumanTaskInstanceSearchDescriptor.TERMINAL, true)&#xD;&#xA;&#xD;&#xA; SearchResult&lt;ArchivedHumanTaskInstance> searchResult = apiAccessor.processAPI.searchArchivedHumanTasks(searchOptionsBuilder.done())&#xD;&#xA;&#xD;&#xA; final List&lt;ArchivedHumanTaskInstance> tasks = searchResult.result&#xD;&#xA;&#xD;&#xA; tasks.first().executedBy" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_Y_xGUAfVEe6tIfKwaAjPqg" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                <referencedElements xmi:type="expression:Expression" xmi:id="_Y_xGUQfVEe6tIfKwaAjPqg" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
               </expression>
             </parameters>
           </configuration>
@@ -615,14 +615,16 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_DDqAoAXuEe67XYCB2OfAJg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_DDqAoQXuEe67XYCB2OfAJg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_DDqApAXuEe67XYCB2OfAJg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_4qUKUAfGEe6aw7FCWSSv4A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_qcFBoAfUEe6tIfKwaAjPqg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_DDqApgXuEe67XYCB2OfAJg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_DDqApwXuEe67XYCB2OfAJg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_v0jAEAXwEe67XYCB2OfAJg" name="zahtevZaNabavku" dataType="_qxDx8QUkEe67XYCB2OfAJg" className="rs.ac.uns.model.ZahtevZaNabavku">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_v0jAEQXwEe67XYCB2OfAJg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_2px_gwfSEe6tIfKwaAjPqg" name="initZahtevZaNabavku()" content="def zahtevZaNabavkuVar = new rs.ac.uns.model.ZahtevZaNabavku()&#xD;&#xA;zahtevZaNabavkuVar.vrstaMaterijala = zahtevZaNabavkuInput?.vrstaMaterijala&#xD;&#xA;zahtevZaNabavkuVar.kolicinaMaterijala = zahtevZaNabavkuInput?.kolicinaMaterijala?.toFloat()&#xD;&#xA;zahtevZaNabavkuVar.jedinicaMere = zahtevZaNabavkuInput?.jedinicaMere&#xD;&#xA;zahtevZaNabavkuVar.prihvacenZahtev = zahtevZaNabavkuInput?.prihvacenZahtev&#xD;&#xA;return zahtevZaNabavkuVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="rs.ac.uns.model.ZahtevZaNabavku">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_2px_hAfSEe6tIfKwaAjPqg" name="zahtevZaNabavkuInput" type="COMPLEX"/>
+        </defaultValue>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_r70ikAYSEe67XYCB2OfAJg" name="narudzbenica" dataType="_qxDx8QUkEe67XYCB2OfAJg" className="rs.ac.uns.model.Narudzbenica">
         <defaultValue xmi:type="expression:Expression" xmi:id="_r70ikQYSEe67XYCB2OfAJg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
@@ -634,7 +636,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_xTkqYQYSEe67XYCB2OfAJg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_qxDx0QUkEe67XYCB2OfAJg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_SwLCMAYBEe67XYCB2OfAJg" name="newForm3" content="81869bb8-f2a3-4a79-a1e6-8d22b40f6c8c" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_SwLCMAYBEe67XYCB2OfAJg" name="pocetnaFORMA" content="56238b27-15ea-473a-b0b7-9c5f112ca6ac" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_qxDx0wUkEe67XYCB2OfAJg">
         <targetForm xmi:type="expression:Expression" xmi:id="_qxDx1AUkEe67XYCB2OfAJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -754,7 +756,23 @@
       <actors xmi:type="process:Actor" xmi:id="_QeMcsAX6Ee67XYCB2OfAJg" name="Zaposleni u nabavci" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_RjQnUAX6Ee67XYCB2OfAJg" name="Direktor nabavke"/>
       <actors xmi:type="process:Actor" xmi:id="_SvHWcAX6Ee67XYCB2OfAJg" name="Dobavljac"/>
-      <contract xmi:type="process:Contract" xmi:id="_qxDx2QUkEe67XYCB2OfAJg"/>
+      <contract xmi:type="process:Contract" xmi:id="_qxDx2QUkEe67XYCB2OfAJg">
+        <inputs xmi:type="process:ContractInput" xmi:id="_2pg5wAfSEe6tIfKwaAjPqg" name="zahtevZaNabavkuInput" type="COMPLEX" dataReference="zahtevZaNabavku">
+          <inputs xmi:type="process:ContractInput" xmi:id="_2pg5wQfSEe6tIfKwaAjPqg" name="vrstaMaterijala"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_2pg5wgfSEe6tIfKwaAjPqg" name="kolicinaMaterijala" type="DECIMAL"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_2pg5wwfSEe6tIfKwaAjPqg" name="jedinicaMere"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_2pg5xAfSEe6tIfKwaAjPqg" name="prihvacenZahtev" type="BOOLEAN"/>
+        </inputs>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_2px_gAfSEe6tIfKwaAjPqg" expression="zahtevZaNabavkuInput?.vrstaMaterijala != null" errorMessage="vrstaMaterijala is mandatory for ZahtevZaNabavku" name="mandatory_zahtevZaNabavkuInput_vrstaMaterijala">
+          <inputNames>zahtevZaNabavkuInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_2px_gQfSEe6tIfKwaAjPqg" expression="zahtevZaNabavkuInput?.kolicinaMaterijala != null" errorMessage="kolicinaMaterijala is mandatory for ZahtevZaNabavku" name="mandatory_zahtevZaNabavkuInput_kolicinaMaterijala">
+          <inputNames>zahtevZaNabavkuInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_2px_ggfSEe6tIfKwaAjPqg" expression="zahtevZaNabavkuInput?.jedinicaMere != null" errorMessage="jedinicaMere is mandatory for ZahtevZaNabavku" name="mandatory_zahtevZaNabavkuInput_jedinicaMere">
+          <inputNames>zahtevZaNabavkuInput</inputNames>
+        </constraints>
+      </contract>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_qxDx2gUkEe67XYCB2OfAJg">
         <name xmi:type="expression:Expression" xmi:id="_qxDx2wUkEe67XYCB2OfAJg" content="" returnTypeFixed="true"/>
         <value xmi:type="expression:Expression" xmi:id="_qxDx3AUkEe67XYCB2OfAJg" content="" returnTypeFixed="true"/>

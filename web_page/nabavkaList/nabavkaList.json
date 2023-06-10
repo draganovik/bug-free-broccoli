@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "nabavkaList",
   "name" : "nabavkaList",
-  "lastUpdate" : 1686419220632,
+  "lastUpdate" : 1686433153839,
   "rows" : [
     [
       {
@@ -92,6 +92,10 @@
                       "dimension" : {
                         "type" : "constant",
                         "value" : 12
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
                       }
                     },
                     "reference" : "b81e0fa0-1e06-4d17-bae7-75b584dc859b",
@@ -441,8 +445,8 @@
                               "value" : false
                             },
                             "hidden" : {
-                              "type" : "expression",
-                              "value" : "!zahtevZaNabavku_selected.prihvacenZahtev"
+                              "type" : "constant",
+                              "value" : false
                             },
                             "cssClasses" : {
                               "type" : "constant",
@@ -463,6 +467,14 @@
                             "value" : {
                               "type" : "variable",
                               "value" : "zahtevZaNabavku_selected.prihvacenZahtev"
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : false
                             }
                           },
                           "reference" : "b2879e6d-69cc-4a7c-ba5e-990dbd84ab14",
